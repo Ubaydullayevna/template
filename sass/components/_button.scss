@@ -1,6 +1,10 @@
 .button{
     background-color: $primary-brand-color;
     color: $primary-white;
-    border-radius: 28px;
-    
+    border-radius: 28px; 
+    transition: 0.3s;
+    &:hover{
+        background-color: #9AE3E3;
+        cursor: pointer;
+    }
 }

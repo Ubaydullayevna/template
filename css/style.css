@@ -374,7 +374,7 @@ button {
 
 .container {
   width: 100%;
-  max-width: 1380px;
+  max-width: 1140px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
@@ -485,12 +485,8 @@ h3 {
   gap: 2rem;
 }
 
-.sitefooter__icon__item {
-  color: white;
-}
-
-.sitefooter__icon__link:hover {
-  color: #2BD0D0;
+.sitefooter__icon__link:hover svg path {
+  fill: #2BD0D0;
 }
 
 .header__container {
@@ -513,7 +509,7 @@ h3 {
   position: relative;
 }
 
-@media (max-width: 500) {
+@media (max-width: 500px) {
   .sitenav__list {
     position: absolute;
     display: none;
@@ -685,15 +681,19 @@ main {
   font-weight: 700;
 }
 
-.base {
-  background-color: #3A3054;
-}
-
 .shorten__btn:hover {
   background-color: #9AE3E3;
+  cursor: pointer;
 }
 
 .shorten__btn:active {
+  background-color: #3A3054;
+}
+
+.base {
+  background-color: #3A3054;
+}
+.base:hover {
   background-color: #3A3054;
 }
 
@@ -749,12 +749,22 @@ main {
   margin-top: 1.8rem;
 }
 
-.features__section {
+.feauter-list {
   display: flex;
   align-items: center;
   gap: 3rem;
-  margin: -10rem 20rem;
-  background-image: url("./images/png/cards-bg.png");
+  margin: -10rem 0;
+  position: relative;
+  z-index: 4;
+}
+
+.feauter-list::before {
+  content: "";
+  position: absolute;
+  top: 53%;
+  width: 100%;
+  height: 8px;
+  background-color: #2BD0D0;
 }
 
 @media (max-width: 500px) {
@@ -772,9 +782,10 @@ main {
 .card {
   width: 360px;
   background-color: #fff;
-  padding: 15 auto;
+  padding: 15px;
   text-align: left;
   border-radius: 5px;
+  z-index: 2;
 }
 
 .card__title {
@@ -814,6 +825,7 @@ main {
   margin-left: 4.5rem;
   width: 68px;
   height: 68px;
+  position: relative;
 }
 
 .final {
@@ -861,4 +873,9 @@ main {
   background-color: #2BD0D0;
   color: #fff;
   border-radius: 28px;
+  transition: 0.3s;
+}
+.button:hover {
+  background-color: #9AE3E3;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
